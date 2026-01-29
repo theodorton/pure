@@ -35,6 +35,16 @@ _pure_set_default pure_color_git_dirty pure_color_mute
 _pure_set_default pure_color_git_stash pure_color_info
 _pure_set_default pure_show_numbered_git_indicator false
 
+# Jujutsu (jj) - alternative VCS
+_pure_set_default pure_enable_jj false
+_pure_set_default pure_symbol_jj_dirty "*"
+_pure_set_default pure_symbol_jj_conflict "!"
+_pure_set_default pure_symbol_jj_parent_bookmark "↑"
+_pure_set_default pure_color_jj_change pure_color_mute
+_pure_set_default pure_color_jj_dirty pure_color_mute
+_pure_set_default pure_color_jj_conflict pure_color_danger
+_pure_set_default pure_color_jj_bookmarks pure_color_info
+
 # Remote info (user@hostname) for SSH and containers (Docker/LXC)
 _pure_set_default pure_color_hostname pure_color_mute
 _pure_set_default pure_color_at_sign pure_color_mute

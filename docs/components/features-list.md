@@ -89,6 +89,34 @@
     ![screenshot pure_enable_git=false](/pure/assets/screenshots/light-pure_enable_git%3Dfalse.png#only-light)
     ![screenshot pure_enable_git=false](/pure/assets/screenshots/mirage-pure_enable_git%3Dfalse.png#only-dark)
 
+### Jujutsu (jj)
+
+> Alternative VCS support for [Jujutsu](https://github.com/martinvonz/jj), a Git-compatible VCS.
+
+| Option                             | Default | Description                                                                                 |
+| :--------------------------------- | :------ | :------------------------------------------------------------------------------------------ |
+| **`pure_enable_jj`**               | `false` | Show info about Jujutsu repository.                                                         |
+| **`pure_symbol_jj_dirty`**         | `*`     | Working copy has uncommitted changes (not empty).                                           |
+| **`pure_symbol_jj_conflict`**      | `!`     | Working copy has conflicts.                                                                 |
+| **`pure_symbol_jj_parent_bookmark`** | `↑`   | Prefix for bookmarks on the parent revision (when current revision has no bookmarks).       |
+
+The jj prompt shows:
+
+- **Change ID**: The short change ID (similar to a git commit hash, but for the working copy)
+- **Dirty indicator**: Shown when the working copy has changes (is not empty)
+- **Conflict indicator**: Shown when there are unresolved conflicts
+- **Bookmarks**: Shows bookmarks at the current revision, or parent's bookmarks with a `↑` prefix
+
+!!! tip "Using jj with a colocated Git repository"
+
+    Jujutsu can be used as a Git frontend with a colocated repository (`jj git init --colocate`).
+    In this case, you may want to disable Git prompt and enable jj:
+
+    ```fish
+    set --universal pure_enable_git false
+    set --universal pure_enable_jj true
+    ```
+
 ### Jobs
 
 | Option               | Default | Description                 |

@@ -7,12 +7,14 @@ function _pure_prompt_first_line \
     set --local prompt_container (_pure_prompt_container)
     set --local prompt_k8s (_pure_prompt_k8s)
     set --local prompt_git (_pure_prompt_git)
+    set --local prompt_jj (_pure_prompt_jj)
     set --local prompt_command_duration (_pure_prompt_command_duration)
     set --local prompt (_pure_print_prompt \
                             $prompt_ssh \
                             $prompt_container \
                             $prompt_k8s \
                             $prompt_git \
+                            $prompt_jj \
                             $prompt_command_duration
                         )
     set --local prompt_width (_pure_string_width $prompt)
@@ -23,6 +25,7 @@ function _pure_prompt_first_line \
         set prompt_components \
             $current_folder \
             $prompt_git \
+            $prompt_jj \
             $prompt_ssh \
             $prompt_container \
             $prompt_k8s \
@@ -34,6 +37,7 @@ function _pure_prompt_first_line \
             $prompt_k8s \
             $current_folder \
             $prompt_git \
+            $prompt_jj \
             $prompt_command_duration
     end
 
